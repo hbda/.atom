@@ -24,6 +24,39 @@
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
 
+
+# ***************************************************************
+# Global
+# ***************************************************************
+
+# Navigation
+# -------------
+'atom-text-editor.vim-mode':
+  'ctrl-k': 'core:move-up'
+  'ctrl-l': 'core:move-right'
+  'ctrl-j': 'core:move-down'
+  'ctrl-h': 'core:move-left'
+
+# ***************************************************************
+# Visual mode
+# ***************************************************************
+
+
 'atom-text-editor.vim-mode:not(.insert-mode)':
+
+# Editing
+# -------------
+  ', space': 'editor:toggle-line-comments'
+  'shift-enter': 'editor:newline-above'
+  'enter': 'editor:newline-below'
+
+# Navigation
+# -------------
   'ctrl-k': 'custom:move-ten-up'
   'ctrl-j': 'custom:move-ten-down'
+
+# ***************************************************************
+# Insert mode
+# ***************************************************************
+'atom-text-editor.vim-mode.insert-mode':
+  'j j': 'vim-mode:reset-normal-mode'
