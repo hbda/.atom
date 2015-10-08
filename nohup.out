@@ -1,0 +1,14 @@
+[3966:1007/224521:ERROR:browser_main_loop.cc(173)] Running without the SUID sandbox! See https://code.google.com/p/chromium/wiki/LinuxSUIDSandboxDevelopment for more information on developing with the sandbox on.
+[3966:1007/224522:WARNING:accelerator_util.cc(185)] Invalid accelerator token: command
+[3966:1007/224522:WARNING:accelerator_util.cc(185)] Invalid accelerator token: command
+[3966:1007/224522:WARNING:accelerator_util.cc(185)] Invalid accelerator token: command
+[3966:1007/224522:WARNING:accelerator_util.cc(185)] Invalid accelerator token: command
+[4007:1007/224522:INFO:renderer_main.cc(200)] Renderer process started
+App load time: 900ms
+[3966:1007/224522:WARNING:accelerator_util.cc(185)] Invalid accelerator token: command
+[3966:1007/224522:WARNING:accelerator_util.cc(185)] Invalid accelerator token: command
+[3966:1007/224522:WARNING:accelerator_util.cc(185)] Invalid accelerator token: command
+[3966:1007/224522:WARNING:accelerator_util.cc(185)] Invalid accelerator token: command
+[3966:1007/224524:INFO:CONSOLE(29)] "activate linter-slim", source: /home/yoda/.atom/packages/linter-slim/lib/init.coffee (29)
+[3966:1007/224525:INFO:CONSOLE(46)] "Window load time: 2585ms", source: file:///usr/share/atom/resources/app.asar/static/index.js (46)
+[3995:1007/224525:ERROR:gles2_cmd_decoder.cc(11539)] [GroupMarkerNotSet(crbug.com/242999)!:D08281C31B3B0000]GL ERROR :GL_INVALID_OPERATION : glTexStorage2DEXT: <- error from previous GL command
