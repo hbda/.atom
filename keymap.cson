@@ -29,18 +29,9 @@
 # Global
 # ***************************************************************
 
-# Navigation
-# -------------
-'atom-text-editor.vim-mode':
-  'ctrl-k': 'core:move-up'
-  'ctrl-l': 'core:move-right'
-  'ctrl-j': 'core:move-down'
-  'ctrl-h': 'core:move-left'
-
 # ***************************************************************
 # Visual mode
 # ***************************************************************
-
 
 'atom-text-editor.vim-mode:not(.insert-mode)':
 
