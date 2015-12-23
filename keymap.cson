@@ -34,7 +34,6 @@
 # ***************************************************************
 
 'atom-text-editor.vim-mode:not(.insert-mode)':
-
 # Editing
 # -------------
   ', space': 'editor:toggle-line-comments'
@@ -46,6 +45,9 @@
   'ctrl-k': 'custom:move-ten-up'
   'ctrl-j': 'custom:move-ten-down'
 
+'atom-text-editor.vim-mode:not(.insert-mode), .tree-view':
+  ', n': 'tree-view:toggle-focus'
+  ', t': 'tree-view:toggle'
 # ***************************************************************
 # Insert mode
 # ***************************************************************

@@ -3,9 +3,13 @@
     userId: "83bc3818-ce8e-a472-0dcf-b6306c6c5087"
   welcome:
     showOnStartup: false
-  core: {}
+  core:
+    packagesWithKeymapsDisabled: [
+      "word-jumper-deluxe"
+    ]
   editor:
     invisibles: {}
+    autoIndent: false
   "fuzzy-finder": {}
   "vim-mode": {}
   "atom-beautify":
@@ -14,3 +18,4 @@
     prefixKeys: [
       "ctrl-k"
     ]
+  "word-jumper-deluxe": {}
