@@ -11,7 +11,8 @@
     invisibles: {}
     autoIndent: false
   "fuzzy-finder": {}
-  "vim-mode": {}
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
   "atom-beautify":
     _analyticsUserId: "8eb2e61c-ad66-4266-aed1-6f9d491acf1b"
   "disable-keybindings":

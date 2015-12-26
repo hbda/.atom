@@ -4,7 +4,7 @@
     "name": "Daniel Carral"
   },
   "main": "./lib/ruby-test-switcher",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Switch between Ruby source code and test files with a single keystroke",
   "keywords": [
     "ruby",
@@ -23,21 +23,77 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    "glob": "^5.0.15",
     "underscore": ">=1.8.3"
   },
-  "readme": "# ruby-test-switcher\nhttps://atom.io/packages/ruby-test-switcher\n\n[![Build Status](https://travis-ci.org/dcarral/atom-ruby-test-switcher.svg?branch=master)](https://travis-ci.org/dcarral/atom-ruby-test-switcher)\n\n__ruby-test-switcher__ is an Atom package which allows users to switch between Ruby source code and test files with a single keystroke. Default key bindings are:\n\nTo switch without splitting panes:\n- Linux: <kbd>ctrl</kbd>-<kbd>.</kbd>\n- OS X:  <kbd>cmd</kbd>-<kbd>.</kbd>\n\nTo switch splitting panes:\n- Linux: <kbd>ctrl</kbd>-<kbd>shift</kbd>-<kbd>.</kbd>\n- OS X:  <kbd>cmd</kbd>-<kbd>ctrl</kbd>-<kbd>.</kbd>\n\nIt supports RSpec, minitest and test-unit, both for Rails and non-Rails projects.\n\nInspired by the awesome [Sublime Text 2 Ruby Tests](https://github.com/maltize/sublime-text-2-ruby-tests) plugin.\n\n## Installation\n\n```\n$ apm install ruby-test-switcher\n```\nOr Settings/Preferences ➔ Install ➔ search for `ruby-test-switcher`\n\n## FAQ\n\n### Can't I switch between source code and test files with other packages?\n\nNot at the moment, since:\n\n- [ruby-test](https://atom.io/packages/ruby-test) doesn't have this feature.\n- [ruby-quick-test](https://github.com/philnash/ruby-quick-test) doesn't have this feature.\n- [Rails RSpec](https://github.com/wangyuhere/atom-rails-rspec) is Rails-dependent (support for non-Rails projects requested in September 2014 [[#3]](https://github.com/wangyuhere/atom-rails-rspec/issues/3))\n- [Rails Open Rspec](https://atom.io/packages/rails-open-rspec) is Rails-dependent.\n\n__ruby-test-switcher__ will be supported as a standalone package, thus allowing you to use it along your favorite test runner ;)\n\nBesides that, the idea is to integrate this feature within some of the test runners above. So, ideally you won't need an extra package to switch between code and test files.\n\n## Contributing\n\n- [Pull requests](https://github.com/dcarral/atom-ruby-test-switcher/pulls) (bonus point for topic branches)\n- [Issues](https://github.com/dcarral/atom-ruby-test-switcher/issues)\n",
+  "readme": "# ruby-test-switcher [![Build Status](https://travis-ci.org/dcarral/atom-ruby-test-switcher.svg?branch=master)](https://travis-ci.org/dcarral/atom-ruby-test-switcher)\n\nhttps://atom.io/packages/ruby-test-switcher\n\n__ruby-test-switcher__ is an Atom package which allows users to switch between Ruby source code and test files with a single keystroke. Default key bindings are:\n\nTo switch without splitting panes:\n- Linux: <kbd>ctrl</kbd>-<kbd>.</kbd>\n- OS X:  <kbd>cmd</kbd>-<kbd>.</kbd>\n\nTo switch splitting panes:\n- Linux: <kbd>ctrl</kbd>-<kbd>shift</kbd>-<kbd>.</kbd>\n- OS X:  <kbd>cmd</kbd>-<kbd>ctrl</kbd>-<kbd>.</kbd>\n\nIt supports RSpec, minitest and test-unit, both for Rails and non-Rails projects.\n\nInspired by the awesome [Sublime Text 2 Ruby Tests](https://github.com/maltize/sublime-text-2-ruby-tests) plugin.\n\n## Installation\n\n```\n$ apm install ruby-test-switcher\n```\nOr Settings/Preferences ➔ Install ➔ search for `ruby-test-switcher`\n\n## FAQ\n\n### Can't I switch between source code and test files with other packages?\n\nNot at the moment, since:\n\n- [ruby-test](https://atom.io/packages/ruby-test) doesn't have this feature.\n- [ruby-quick-test](https://github.com/philnash/ruby-quick-test) doesn't have this feature.\n- [Rails RSpec](https://github.com/wangyuhere/atom-rails-rspec) is Rails-dependent (support for non-Rails projects requested in September 2014 [[#3]](https://github.com/wangyuhere/atom-rails-rspec/issues/3))\n- [Rails Open Rspec](https://atom.io/packages/rails-open-rspec) is Rails-dependent.\n\n__ruby-test-switcher__ will be supported as a standalone package, thus allowing you to use it along your favorite test runner ;)\n\nBesides that, the idea is to integrate this feature within some of the test runners above. So, ideally you won't need an extra package to switch between code and test files.\n\n## Contributing\n\n- [Pull requests](https://github.com/dcarral/atom-ruby-test-switcher/pulls) (bonus point for topic branches)\n- [Issues](https://github.com/dcarral/atom-ruby-test-switcher/issues)\n",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/dcarral/atom-ruby-test-switcher/issues"
   },
   "homepage": "https://github.com/dcarral/atom-ruby-test-switcher#readme",
-  "_id": "ruby-test-switcher@1.1.0",
-  "_shasum": "8a2f54db3fe4acf7f1923446ba045a1b949262e5",
-  "_resolved": "file:../d-11596-28411-1a9vck5/package.tgz",
-  "_from": "../d-11596-28411-1a9vck5/package.tgz",
+  "_id": "ruby-test-switcher@1.2.0",
+  "_shasum": "dbf8b119e5fadaad09e76c6329923a4fb488dabb",
+  "_resolved": "file:../d-1151126-32038-1rt165d/package.tgz",
+  "_from": "../d-1151126-32038-1rt165d/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
+      {
+        "name": "glob",
+        "version": "5.0.15",
+        "path": "node_modules/glob/glob.js"
+      },
+      {
+        "name": "inflight",
+        "version": "1.0.4",
+        "path": "node_modules/glob/node_modules/inflight/inflight.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.1",
+        "path": "node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules/glob/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "3.0.0",
+        "path": "node_modules/glob/node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "brace-expansion",
+        "version": "1.1.2",
+        "path": "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js"
+      },
+      {
+        "name": "balanced-match",
+        "version": "0.3.0",
+        "path": "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js"
+      },
+      {
+        "name": "concat-map",
+        "version": "0.0.1",
+        "path": "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js"
+      },
+      {
+        "name": "once",
+        "version": "1.3.3",
+        "path": "node_modules/glob/node_modules/once/once.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.1",
+        "path": "node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js"
+      },
+      {
+        "name": "path-is-absolute",
+        "version": "1.0.0",
+        "path": "node_modules/glob/node_modules/path-is-absolute/index.js"
+      },
       {
         "name": "underscore",
         "version": "1.8.3",
@@ -47,15 +103,48 @@
     "extensions": {
       ".json": [
         "coffeelint.json",
+        "node_modules/glob/node_modules/inflight/node_modules/wrappy/package.json",
+        "node_modules/glob/node_modules/inflight/package.json",
+        "node_modules/glob/node_modules/inherits/package.json",
+        "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json",
+        "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json",
+        "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/package.json",
+        "node_modules/glob/node_modules/minimatch/package.json",
+        "node_modules/glob/node_modules/once/node_modules/wrappy/package.json",
+        "node_modules/glob/node_modules/once/package.json",
+        "node_modules/glob/node_modules/path-is-absolute/package.json",
+        "node_modules/glob/package.json",
         "node_modules/underscore/package.json",
         "package.json"
       ],
       ".coffee": [
         "lib/buffer-switcher.coffee",
+        "lib/global-path-finder.coffee",
+        "lib/path-finder-utilities.coffee",
         "lib/path-finder.coffee",
+        "lib/quick-path-finder.coffee",
         "lib/ruby-test-switcher.coffee"
       ],
       ".js": [
+        "node_modules/glob/common.js",
+        "node_modules/glob/glob.js",
+        "node_modules/glob/node_modules/inflight/inflight.js",
+        "node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js",
+        "node_modules/glob/node_modules/inflight/test.js",
+        "node_modules/glob/node_modules/inherits/inherits.js",
+        "node_modules/glob/node_modules/inherits/inherits_browser.js",
+        "node_modules/glob/node_modules/inherits/test.js",
+        "node_modules/glob/node_modules/minimatch/minimatch.js",
+        "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/example.js",
+        "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js",
+        "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/example.js",
+        "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js",
+        "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js",
+        "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js",
+        "node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js",
+        "node_modules/glob/node_modules/once/once.js",
+        "node_modules/glob/node_modules/path-is-absolute/index.js",
+        "node_modules/glob/sync.js",
         "node_modules/underscore/underscore-min.js",
         "node_modules/underscore/underscore.js"
       ]
@@ -68,7 +157,54 @@
           "spec"
         ],
         "dependencies": {
+          "glob": "^5.0.15",
           "underscore": ">=1.8.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/glob"
+        ],
+        "dependencies": {
+          "inflight": "^1.0.4",
+          "inherits": "2",
+          "minimatch": "2 || 3",
+          "once": "^1.3.0",
+          "path-is-absolute": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/glob/node_modules/inflight"
+        ],
+        "dependencies": {
+          "once": "^1.3.0",
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/glob/node_modules/minimatch"
+        ],
+        "dependencies": {
+          "brace-expansion": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/glob/node_modules/minimatch/node_modules/brace-expansion"
+        ],
+        "dependencies": {
+          "balanced-match": "^0.3.0",
+          "concat-map": "0.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/glob/node_modules/once"
+        ],
+        "dependencies": {
+          "wrappy": "1"
         }
       }
     ]

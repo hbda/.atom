@@ -1,5 +1,5 @@
 {CompositeDisposable} = require 'atom'
-{findFile, exec, tempFile} = helpers = require 'atom-linter'
+{find, exec, tempFile} = helpers = require 'atom-linter'
 path = require 'path'
 
 module.exports =
@@ -8,13 +8,17 @@ module.exports =
       title: 'Additional Arguments'
       type: 'string'
       default: ''
+    disableWhenNoConfigFileInPath:
+      type: 'boolean'
+      default: false
+      description: 'Disable linter when no `.scss-lint.yml` is found in project'
     executablePath:
       title: 'Executable Path'
       type: 'string'
-      default: ''
+      default: 'scss-lint'
 
   activate: ->
-    require('atom-package-deps').install require('../package.json').name
+    require('atom-package-deps').install()
     @subs = new CompositeDisposable
     @subs.add atom.config.observe 'linter-scss-lint.executablePath',
       (executablePath) =>
@@ -22,6 +26,9 @@ module.exports =
     @subs.add atom.config.observe 'linter-scss-lint.additionalArguments',
       (additionalArguments) =>
         @additionalArguments = additionalArguments
+    @subs.add atom.config.observe 'linter-scss-lint.disableWhenNoConfigFileInPath',
+      (disableOnNoConfig) =>
+        @disableOnNoConfig = disableOnNoConfig
 
   deactivate: ->
     @subs.dispose()
@@ -34,17 +41,18 @@ module.exports =
       lint: (editor) =>
         filePath = editor.getPath()
         cwd = path.dirname(filePath)
+
+        config = find cwd, '.scss-lint.yml'
+
+        return [] if @disableOnNoConfig and not config
+
         tempFile path.basename(filePath), editor.getText(), (tmpFilePath) =>
-          config = findFile cwd, '.scss-lint.yml'
           params = [
             tmpFilePath,
             '--format=JSON',
             if config? then "--config=#{config}",
             @additionalArguments.split(' ')...
           ].filter((e) -> e)
-          throw new TypeError(
-            "Error linting #{filePath}: No 'scss-lint' executable specified"
-          ) if @executablePath is ''
           return helpers.exec(@executablePath, params, {cwd}).then (stdout) ->
             lint = try JSON.parse stdout
             throw new TypeError(stdout) unless lint?
